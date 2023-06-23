@@ -144,6 +144,9 @@ def handle_click(event):
         print("Clicked on the specified portion of the screen!")
         play_audio("Prototipo_Barca-master/Colline_cioccolato.mp3")
         #SpeakText("Le Colline del Cioccolato sono una famosa attrazione turistica di Bohol.") #qui leggo la storia
+    elif 50 <= x <= 100 and 200 <= y <= 800: #CELLA DEL SECONDO MP3
+        print("Clicked on the specified portion of the screen!")
+        play_audio("Prototipo_Barca-master/Colline_cioccolato.mp3") #SECONDO MP3
 
 
 #################------------MAIN--------#################################
