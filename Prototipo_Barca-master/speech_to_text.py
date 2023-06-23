@@ -84,18 +84,25 @@ def recognizer(window):
             #inserire qui le varie immagini associate alla lingua
             if language == "it" or language == "mg":
                 image_path = "./Prototipo_Barca-master/Immagini_sfondo/1.jpg"
+                image = Image.open(image_path)
+                photo = ImageTk.PhotoImage(image)
+                label1.configure(image=photo)
+                label1.image = photo
             elif language == "es" or language == "eo":
                 image_path = "./Prototipo_Barca-master/Immagini_sfondo/2.jpg"
+                photo = ImageTk.PhotoImage(image)
+                label1.configure(image=photo)
+                label1.image = photo
             elif language == "al":
                 image_path = "./Prototipo_Barca-master/Immagini_sfondo/3.jpg"
-            #else:
-                # Lingua non riconosciuta, usa l'immagine predefinita
+                photo = ImageTk.PhotoImage(image)
+                label1.configure(image=photo)
+                label1.image = photo
+            else:
+                print("lingua non riconosciuta")
             #    image_path = "./test2.jpg"
 
-            image = Image.open(image_path)
-            photo = ImageTk.PhotoImage(image)
-            label1.configure(image=photo)
-            label1.image = photo
+          
 
         except sr.UnknownValueError:
             print("Sorry, I could not understand what you said, the language is not in my dictionary")
