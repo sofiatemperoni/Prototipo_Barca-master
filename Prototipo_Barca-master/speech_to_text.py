@@ -67,7 +67,7 @@ def recognizer(window):
         
         try: #per gestire gli errori se qualcosa va storto
 
-           # MyText=r.recognize_google(audio2) #prende audio e lo converte in testo, presupponendo sia italiano
+            #MyText=r.recognize_google(audio2) #prende audio e lo converte in testo, presupponendo sia italiano
             MyText=r.recognize_google(audio2, language='it-IT') #prende audio e lo converte in testo, presupponendo sia italiano
 
             MyText = MyText.lower() #mette testo minuscolo
@@ -114,6 +114,7 @@ def start_listening():
    
 def pause_listening():
     window.title("Paused")
+    pygame.mixer.music.stop()
     pause_event.set()
 
 def resume_listening():
@@ -139,14 +140,14 @@ def handle_click(event):
 
     pygame.init()
 
-    #finestra di pixel nella quale deve avvenire il click -> Colline di cioccolato
-    if 50 <= x <= 100 and 200 <= y <= 800:
+    #finestra di pixel nella quale deve avvenire il click 
+    if 0 <= x <= 150 and 300 <= y <= 600:
         print("Clicked on the specified portion of the screen!")
-        play_audio("Prototipo_Barca-master/Colline_cioccolato.mp3")
+        play_audio("Prototipo_Barca-master/Colline_cioccolato.mp3") #PRIMOMP3
         #SpeakText("Le Colline del Cioccolato sono una famosa attrazione turistica di Bohol.") #qui leggo la storia
-    elif 50 <= x <= 100 and 200 <= y <= 800: #CELLA DEL SECONDO MP3
+    elif 300 <= x <= 500 and 130 <= y <= 300: #CELLA DEL SECONDO MP3
         print("Clicked on the specified portion of the screen!")
-        play_audio("Prototipo_Barca-master/Colline_cioccolato.mp3") #SECONDO MP3
+        play_audio("Prototipo_Barca-master/Dragone.mp3") #SECONDO MP3
 
 
 #################------------MAIN--------#################################
