@@ -128,21 +128,21 @@ def stop_listening():
         sys.exit()  
 
 # Function to play the audio1
- def play_audio():
-   pygame.mixer.music.load("Colline_cioccolato.mp3")  # Replace "audio.mp3" with your MP3 file path
-   pygame.mixer.music.play("Colline_cioccolato.mp3")
+def play_audio(filename):
+   pygame.mixer.music.load(filename)  # Replace "audio.mp3" with your MP3 file path
+   pygame.mixer.music.play()
 
- #Funzione che gestisce il click sullo schermo per far partire la voce
-   def handle_click(event):
+#Funzione che gestisce il click sullo schermo per far partire la voce
+def handle_click(event):
     x = event.x
     y = event.y
 
-    # Initialize pygame
     pygame.init()
 
     #finestra di pixel nella quale deve avvenire il click -> Colline di cioccolato
     if 50 <= x <= 100 and 200 <= y <= 800:
         print("Clicked on the specified portion of the screen!")
+        play_audio("Prototipo_Barca-master/Colline_cioccolato.mp3")
         #SpeakText("Le Colline del Cioccolato sono una famosa attrazione turistica di Bohol.") #qui leggo la storia
 
 
