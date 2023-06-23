@@ -83,11 +83,11 @@ def recognizer(window):
 
             #inserire qui le varie immagini associate alla lingua
             if language == "it" or language == "mg":
-                image_path = "/Users/tempe/Desktop/Prototipo_Barca-master/Prototipo_Barca-master/Immagini_sfondo/1.jpg"
+                image_path = "./Prototipo_Barca-master/Immagini_sfondo/1.jpg"
             elif language == "es" or language == "eo":
-                image_path = "/Users/tempe/Desktop/Prototipo_Barca-master/Prototipo_Barca-master/Immagini_sfondo/2.jpg"
+                image_path = "./Prototipo_Barca-master/Immagini_sfondo/2.jpg"
             elif language == "al":
-                image_path = "/Users/tempe/Desktop/Prototipo_Barca-master/Prototipo_Barca-master/Immagini_sfondo/3.jpg"
+                image_path = "./Prototipo_Barca-master/Immagini_sfondo/3.jpg"
             #else:
                 # Lingua non riconosciuta, usa l'immagine predefinita
             #    image_path = "./test2.jpg"
@@ -156,7 +156,7 @@ if __name__ =="__main__":
         window.state('zoomed')
         window.title("Title for my program") #Inserire il titolo del progetto !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
                 
-        photo_image = open_image("/Users/tempe/Desktop/Prototipo_Barca-master/Prototipo_Barca-master/Immagini_sfondo/0.jpg")  # Immagine predefinita di sfondo
+        photo_image = open_image("./Prototipo_Barca-master/Immagini_sfondo/0.jpg")  # Immagine predefinita di sfondo
         label1 = tk.Label(window)
         label1.configure(image=photo_image)
         label1.place(x=545, y=0) #coordinate pixel per immagine di sfondo
