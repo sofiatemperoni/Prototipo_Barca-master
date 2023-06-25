@@ -157,18 +157,19 @@ def handle_click(event):
         print("Clicked on the specified portion of the screen!")
         play_audio("Prototipo_Barca-master/Colline_cioccolato.mp3") #PRIMOMP3
         #SpeakText("Le Colline del Cioccolato sono una famosa attrazione turistica di Bohol.") #qui leggo la storia
+        
     elif 300 <= x <= 500 and 130 <= y <= 300: #CELLA DEL SECONDO MP3
         print("Clicked on the specified portion of the screen!")
         play_audio("Prototipo_Barca-master/Dragone.mp3") #SECONDO MP3
 
-    elif 0 <= x <= 1000 and 0 <= y <= 2000: #POSIZIONE IN CUI CLICCARE PER FAR APPARIRE LA TERZA IMMAGINE
+    elif 0 <= x <= 80 and 0 <= y <= 80: #POSIZIONE IN CUI CLICCARE PER FAR APPARIRE LA TERZA IMMAGINE
         image_path = "./Prototipo_Barca-master/Immagini_sfondo/3.jpg"
         image = Image.open(image_path)
         photo = ImageTk.PhotoImage(image)
         label1.configure(image=photo)
         label1.image = photo
 
-    elif 0 <= x <= 1000 and 0 <= y <= 2000: #POSIZIONE IN CUI CLICCARE PER FAR APPARIRE LA SECONDA IMMAGINE
+    elif 350 <= x <= 450 and 0 <= y <= 50: #POSIZIONE IN CUI CLICCARE PER FAR APPARIRE LA SECONDA IMMAGINE
         image_path = "./Prototipo_Barca-master/Immagini_sfondo/2.jpg"
         image = Image.open(image_path)
         photo = ImageTk.PhotoImage(image)
