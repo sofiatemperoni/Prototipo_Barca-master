@@ -153,7 +153,7 @@ def handle_click(event):
     pygame.init()
 
     #finestra di pixel nella quale deve avvenire il click 
-    if 0 <= x <= 150 and 300 <= y <= 600:
+    if 50 <= x <= 150 and 300 <= y <= 600:
         print("Clicked on the specified portion of the screen!")
         play_audio("Prototipo_Barca-master/Colline_cioccolato.mp3") #PRIMOMP3
         #SpeakText("Le Colline del Cioccolato sono una famosa attrazione turistica di Bohol.") #qui leggo la storia
@@ -162,19 +162,19 @@ def handle_click(event):
         print("Clicked on the specified portion of the screen!")
         play_audio("Prototipo_Barca-master/Dragone.mp3") #SECONDO MP3
 
-    elif 0 <= y <= 200 and 1700 <= x <= 1920: #POSIZIONE IN CUI CLICCARE PER FAR APPARIRE LA seconda IMMAGINE
-        image_path = "./Prototipo_Barca-master/Immagini_sfondo/2.jpg"
-        image = Image.open(image_path)
-        photo = ImageTk.PhotoImage(image)
-        label1.configure(image=photo)
-        label1.image = photo
+    #elif 0 <= y <= 200 and 1700 <= x <= 1920: #POSIZIONE IN CUI CLICCARE PER FAR APPARIRE LA seconda IMMAGINE
+        #image_path = "./Prototipo_Barca-master/Immagini_sfondo/2.jpg"
+        #image = Image.open(image_path)
+        #photo = ImageTk.PhotoImage(image)
+        #label1.configure(image=photo)
+        #label1.image = photo
 
-    elif 1000 <= y <= 1100 and 1700 <= x <= 1920: #POSIZIONE IN CUI CLICCARE PER FAR APPARIRE LA TERZA IMMAGINE
-        image_path = "./Prototipo_Barca-master/Immagini_sfondo/3.jpg"
-        image = Image.open(image_path)
-        photo = ImageTk.PhotoImage(image)
-        label1.configure(image=photo)
-        label1.image = photo
+    #elif 900 <= y <= 1100 and 900 <= x <= 1920: #POSIZIONE IN CUI CLICCARE PER FAR APPARIRE LA TERZA IMMAGINE
+        #image_path = "./Prototipo_Barca-master/Immagini_sfondo/3.jpg"
+        #image = Image.open(image_path)
+        #photo = ImageTk.PhotoImage(image)
+        #label1.configure(image=photo)
+        #label1.image = photo
 
     
 
