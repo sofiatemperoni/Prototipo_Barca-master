@@ -93,7 +93,7 @@ def recognizer(window):
                 photo = ImageTk.PhotoImage(image)
                 label1.configure(image=photo)
                 label1.image = photo
-            elif language == "al":
+            elif language == "sq":
                 image_path = "./Prototipo_Barca-master/Immagini_sfondo/3.jpg"
                 photo = ImageTk.PhotoImage(image)
                 label1.configure(image=photo)
