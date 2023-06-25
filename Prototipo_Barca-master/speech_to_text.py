@@ -90,11 +90,13 @@ def recognizer(window):
                 label1.image = photo
             elif language == "es" or language == "eo":
                 image_path = "./Prototipo_Barca-master/Immagini_sfondo/2.jpg"
+                image = Image.open(image_path)
                 photo = ImageTk.PhotoImage(image)
                 label1.configure(image=photo)
                 label1.image = photo
             elif language == "sq":
                 image_path = "./Prototipo_Barca-master/Immagini_sfondo/3.jpg"
+                image = Image.open(image_path)
                 photo = ImageTk.PhotoImage(image)
                 label1.configure(image=photo)
                 label1.image = photo
@@ -144,6 +146,9 @@ def play_audio(filename):
 def handle_click(event):
     x = event.x
     y = event.y
+    
+    print(x)
+    print(y)
 
     pygame.init()
 
@@ -156,6 +161,19 @@ def handle_click(event):
         print("Clicked on the specified portion of the screen!")
         play_audio("Prototipo_Barca-master/Dragone.mp3") #SECONDO MP3
 
+    elif 0 <= x <= 1000 and 0 <= y <= 2000: #POSIZIONE IN CUI CLICCARE PER FAR APPARIRE LA TERZA IMMAGINE
+        image_path = "./Prototipo_Barca-master/Immagini_sfondo/3.jpg"
+        image = Image.open(image_path)
+        photo = ImageTk.PhotoImage(image)
+        label1.configure(image=photo)
+        label1.image = photo
+
+    elif 0 <= x <= 1000 and 0 <= y <= 2000: #POSIZIONE IN CUI CLICCARE PER FAR APPARIRE LA SECONDA IMMAGINE
+        image_path = "./Prototipo_Barca-master/Immagini_sfondo/2.jpg"
+        image = Image.open(image_path)
+        photo = ImageTk.PhotoImage(image)
+        label1.configure(image=photo)
+        label1.image = photo
 
 #################------------MAIN--------#################################
 
