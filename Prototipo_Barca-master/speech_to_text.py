@@ -61,7 +61,7 @@ def recognizer(window):
             print("I'm listening")   
             window.title("Listening")
  
-            r.adjust_for_ambient_noise(source2, duration=0.2) #sensibilita microfono
+            r.adjust_for_ambient_noise(source2, duration=1) #sensibilita microfono
                 
             audio2 = r.listen(source2) 
         
@@ -100,8 +100,8 @@ def recognizer(window):
                 photo = ImageTk.PhotoImage(image)
                 label1.configure(image=photo)
                 label1.image = photo
-            #else:
-                #print("lingua non riconosciuta")
+            else:
+                print("lingua non riconosciuta")
             #    image_path = "./test2.jpg"
 
           
@@ -110,7 +110,7 @@ def recognizer(window):
             print("Sorry, I could not understand what you said, the language is not in my dictionary")
         except sr.RequestError as e:
             print("Could not request results from Google Speech Recognition service; {0}".format(e))
-                                        
+                                       
 
 #################------------FUNCTIONS--------#################################
 
