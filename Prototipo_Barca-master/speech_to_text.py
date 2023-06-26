@@ -180,15 +180,21 @@ def change_image(event):
         image_path = "./Prototipo_Barca-master/Immagini_sfondo/2.jpg"
         image = Image.open(image_path)
         photo = ImageTk.PhotoImage(image)
-        label1.configure(image=photo)
-        label1.image = photo
+        window.after(3000, actuate_changes(image,photo))
+      
     elif event.char.lower() == "w":
         image_path = "./Prototipo_Barca-master/Immagini_sfondo/3.jpg"
         image = Image.open(image_path)
         photo = ImageTk.PhotoImage(image)
-        label1.configure(image=photo)
-        label1.image = photo
+        window.after(3000, actuate_changes(image,photo))
 
+
+def actuate_changes(image,photo):
+    label1.configure(image=photo)
+    label1.image = photo
+
+
+     
     
 
 #################------------MAIN--------#################################
