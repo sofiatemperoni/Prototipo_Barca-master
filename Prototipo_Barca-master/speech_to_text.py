@@ -100,8 +100,8 @@ def recognizer(window):
                 photo = ImageTk.PhotoImage(image)
                 label1.configure(image=photo)
                 label1.image = photo
-            else:
-                print("lingua non riconosciuta")
+            #else:
+                #print("lingua non riconosciuta")
             #    image_path = "./test2.jpg"
 
           
@@ -183,7 +183,7 @@ if __name__ =="__main__":
         window.geometry("1920x1080") #formato finestra
         window.resizable(True, True)
         window.state('zoomed')
-        window.title("I'M BARCA") #Inserire il titolo del progetto !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+        window.title("I'M BARCA") #titolo del progetto
                 
         photo_image = open_image("./Prototipo_Barca-master/Immagini_sfondo/0.jpg")  # Immagine predefinita di sfondo
         label1 = tk.Label(window)
