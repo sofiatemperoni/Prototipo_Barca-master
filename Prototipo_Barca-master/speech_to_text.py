@@ -173,6 +173,22 @@ def handle_click(event):
         #label1.configure(image=photo)
         #label1.image = photo
 
+
+# Function to change the image
+def change_image(event):
+    if event.char.lower() == "q":
+        image_path = "./Prototipo_Barca-master/Immagini_sfondo/2.jpg"
+        image = Image.open(image_path)
+        photo = ImageTk.PhotoImage(image)
+        label1.configure(image=photo)
+        label1.image = photo
+    elif event.char.lower() == "w":
+        image_path = "./Prototipo_Barca-master/Immagini_sfondo/3.jpg"
+        image = Image.open(image_path)
+        photo = ImageTk.PhotoImage(image)
+        label1.configure(image=photo)
+        label1.image = photo
+
     
 
 #################------------MAIN--------#################################
@@ -204,6 +220,7 @@ if __name__ =="__main__":
         #resume_button.place(x=800, y=750)
 
         window.bind("<Button-1>", handle_click)
+        window.bind("<Key>", change_image)
 
         #stop_button = tk.Button(window, text="Stop", command=stop_listening)
        # stop_button.place(x=400, y=450)
